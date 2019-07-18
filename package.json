@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/4shers/4shers-client/issues"
   },
-  "homepage": "https://github.com/4shers/4shers-client#readme"
+  "homepage": "https://github.com/4shers/4shers-client#readme",
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
 }
