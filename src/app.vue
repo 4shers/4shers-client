@@ -1,9 +1,10 @@
 <template>
-    <navbar></navbar>
+    <loginpage/>
 </template>
 
 <script>
     import navbar from './components/navbar.vue'
+    import loginpage from './components/loginpage.vue'
     export default {
         data() {
             return {
@@ -11,7 +12,8 @@
             }
         },
         components: {
-            navbar
+            navbar,
+            loginpage
         },
     }
 </script>

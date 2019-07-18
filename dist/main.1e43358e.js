@@ -8882,7 +8882,7 @@ function patchScopedSlots (instance) {
   }
 }
 
-},{}],"src/app.vue":[function(require,module,exports) {
+},{}],"src/components/navbar.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8893,11 +8893,389 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'navbar'
+};
+exports.default = _default;
+        var $01e377 = exports.default || module.exports;
+      
+      if (typeof $01e377 === 'function') {
+        $01e377 = $01e377.options;
+      }
+    
+        /* template */
+        Object.assign($01e377, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "nav",
+    {
+      staticClass:
+        "navbar navbar-dark bg-dark d-flex justify-content-space-between sticky-top"
+    },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "logo d-flex align-items-center",
+          staticStyle: { position: "absolute", right: "22px" }
+        },
+        [
+          !_vm.isLogin
+            ? _c(
+                "a",
+                {
+                  staticClass: "navbar-brand",
+                  attrs: {
+                    href: "#",
+                    "data-target": "#signinModal",
+                    "data-toggle": "modal"
+                  }
+                },
+                [_vm._v("Sign In")]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          !_vm.isLogin
+            ? _c(
+                "a",
+                {
+                  staticClass: "navbar-brand",
+                  attrs: {
+                    href: "#",
+                    "data-target": "#signupModal",
+                    "data-toggle": "modal"
+                  }
+                },
+                [_vm._v("Sign Up")]
+              )
+            : _vm._e()
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "logo d-flex align-items-center" }, [
+        _vm.isLogin
+          ? _c(
+              "a",
+              {
+                staticClass: "navbar-brand",
+                attrs: { href: "#", "data-dismiss": "modal" },
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.signout($event)
+                  }
+                }
+              },
+              [_vm._v("Sign Out")]
+            )
+          : _vm._e()
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "logo d-flex align-items-center" }, [
+      _c("img", {
+        staticClass: "d-inline-block align-top",
+        attrs: {
+          src:
+            "https://i.pinimg.com/originals/16/de/5f/16de5f8dd1ffe99f9e169a0605a960b3.png",
+          width: "60",
+          height: "60",
+          alt: "Hacktivox!"
+        }
+      }),
+      _vm._v(" "),
+      _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+        _vm._v("\n          Hacktivox\n        ")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$01e377', $01e377);
+          } else {
+            api.reload('$01e377', $01e377);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"C:/Users/Kuma/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/loginpage.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'loginpage'
+};
+exports.default = _default;
+        var $0526cb = exports.default || module.exports;
+      
+      if (typeof $0526cb === 'function') {
+        $0526cb = $0526cb.options;
+      }
+    
+        /* template */
+        Object.assign($0526cb, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        {
+          staticClass: "row",
+          staticStyle: { "text-align": "center", padding: "150px" }
+        },
+        [
+          _c(
+            "form",
+            {
+              staticStyle: {
+                "margin-left": "auto",
+                "margin-right": "auto",
+                "margin-top": "auto",
+                "margin-bottom": "auto"
+              },
+              attrs: { id: "formLogin" }
+            },
+            [
+              _c("h5", [
+                _c("strong", [_vm._v("FOX")]),
+                _c("i", [_vm._v("shared")])
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "form-group", staticStyle: { width: "650px" } },
+                [
+                  _c("label", { attrs: { for: "username" } }, [
+                    _vm._v("Username")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "username",
+                      "aria-describedby": "usernameHelp",
+                      placeholder: "Username"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "small",
+                    {
+                      staticClass: "form-text text-muted",
+                      attrs: { id: "userameHelp" }
+                    },
+                    [_vm._v("Your username.")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "form-group", staticStyle: { width: "650px" } },
+                [
+                  _c("label", { attrs: { for: "password" } }, [
+                    _vm._v("Password")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "password",
+                      id: "password",
+                      placeholder: "Password"
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  staticStyle: {
+                    "margin-left": "auto",
+                    "margin-right": "auto",
+                    background: "#E9ECEF",
+                    color: "black",
+                    border: "#E9ECEF",
+                    left: "22px"
+                  },
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Submit")]
+              ),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-link",
+                  attrs: {
+                    type: "button",
+                    "data-toggle": "modal",
+                    "data-target": "#formregister",
+                    "aria-expanded": "false"
+                  }
+                },
+                [_vm._v("Or register here?")]
+              ),
+              _vm._v(" "),
+              _c("br")
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$0526cb', $0526cb);
+          } else {
+            api.reload('$0526cb', $0526cb);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"C:/Users/Kuma/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/app.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _navbar = _interopRequireDefault(require("./components/navbar.vue"));
+
+var _loginpage = _interopRequireDefault(require("./components/loginpage.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
       message: 'Hello world'
     };
+  },
+  components: {
+    navbar: _navbar.default,
+    loginpage: _loginpage.default
   }
 };
 exports.default = _default;
@@ -8913,7 +9291,7 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v(_vm._s(_vm.message))])
+  return _c("loginpage")
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -8948,7 +9326,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"C:/Users/Kuma/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
+},{"./components/navbar.vue":"src/components/navbar.vue","./components/loginpage.vue":"src/components/loginpage.vue","_css_loader":"C:/Users/Kuma/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -8986,7 +9364,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55599" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55787" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
