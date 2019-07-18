@@ -1,5 +1,9 @@
 <template>
-    <loginpage/>
+    <div>
+        <h1 v-if="isLogin">Setelah login</h1>
+        <loginpage :kelogin="message" @darianak="ubahtext" v-if="!isLogin"/>
+    </div>
+    
 </template>
 
 <script>
@@ -8,7 +12,14 @@
     export default {
         data() {
             return {
+                isLogin: false,
                 message: 'Hello world'
+            }
+        },
+        methods: {
+            ubahtext(payload) {
+                console.log(payload)
+                this.message=payload.username
             }
         },
         components: {

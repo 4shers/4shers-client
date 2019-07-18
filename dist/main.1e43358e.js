@@ -9079,8 +9079,25 @@ exports.default = void 0;
 //
 //
 //
+//
 var _default = {
-  name: 'loginpage'
+  name: 'loginpage',
+  data: function data() {
+    return {
+      username: '',
+      password: ''
+    };
+  },
+  props: ['kelogin'],
+  methods: {
+    login: function login() {
+      // this.kelogin = 'test'
+      this.$emit('darianak', {
+        username: this.username,
+        password: this.password
+      });
+    }
+  }
 };
 exports.default = _default;
         var $0526cb = exports.default || module.exports;
@@ -9095,125 +9112,167 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c(
+      "div",
+      {
+        staticClass: "row",
+        staticStyle: { "text-align": "center", padding: "150px" }
+      },
+      [
+        _c(
+          "form",
+          {
+            staticStyle: {
+              "margin-left": "auto",
+              "margin-right": "auto",
+              "margin-top": "auto",
+              "margin-bottom": "auto"
+            },
+            attrs: { id: "formLogin" }
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.kelogin))]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "form-group", staticStyle: { width: "650px" } },
+              [
+                _c("label", { attrs: { for: "username" } }, [
+                  _vm._v("Username")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.username,
+                      expression: "username"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    id: "username",
+                    "aria-describedby": "usernameHelp",
+                    placeholder: "Username"
+                  },
+                  domProps: { value: _vm.username },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.username = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "small",
+                  {
+                    staticClass: "form-text text-muted",
+                    attrs: { id: "userameHelp" }
+                  },
+                  [_vm._v("Your username.")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "form-group", staticStyle: { width: "650px" } },
+              [
+                _c("label", { attrs: { for: "password" } }, [
+                  _vm._v("Password")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.password,
+                      expression: "password"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "password",
+                    id: "password",
+                    placeholder: "Password"
+                  },
+                  domProps: { value: _vm.password },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.password = $event.target.value
+                    }
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                staticStyle: {
+                  "margin-left": "auto",
+                  "margin-right": "auto",
+                  background: "#E9ECEF",
+                  color: "black",
+                  border: "#E9ECEF",
+                  left: "22px"
+                },
+                attrs: { type: "submit" },
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.login($event)
+                  }
+                }
+              },
+              [_vm._v("Submit")]
+            ),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-link",
+                attrs: {
+                  type: "button",
+                  "data-toggle": "modal",
+                  "data-target": "#formregister",
+                  "aria-expanded": "false"
+                }
+              },
+              [_vm._v("Or register here?")]
+            ),
+            _vm._v(" "),
+            _c("br")
+          ]
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c(
-        "div",
-        {
-          staticClass: "row",
-          staticStyle: { "text-align": "center", padding: "150px" }
-        },
-        [
-          _c(
-            "form",
-            {
-              staticStyle: {
-                "margin-left": "auto",
-                "margin-right": "auto",
-                "margin-top": "auto",
-                "margin-bottom": "auto"
-              },
-              attrs: { id: "formLogin" }
-            },
-            [
-              _c("h5", [
-                _c("strong", [_vm._v("FOX")]),
-                _c("i", [_vm._v("shared")])
-              ]),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "form-group", staticStyle: { width: "650px" } },
-                [
-                  _c("label", { attrs: { for: "username" } }, [
-                    _vm._v("Username")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      id: "username",
-                      "aria-describedby": "usernameHelp",
-                      placeholder: "Username"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "small",
-                    {
-                      staticClass: "form-text text-muted",
-                      attrs: { id: "userameHelp" }
-                    },
-                    [_vm._v("Your username.")]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "form-group", staticStyle: { width: "650px" } },
-                [
-                  _c("label", { attrs: { for: "password" } }, [
-                    _vm._v("Password")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "password",
-                      id: "password",
-                      placeholder: "Password"
-                    }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  staticStyle: {
-                    "margin-left": "auto",
-                    "margin-right": "auto",
-                    background: "#E9ECEF",
-                    color: "black",
-                    border: "#E9ECEF",
-                    left: "22px"
-                  },
-                  attrs: { type: "submit" }
-                },
-                [_vm._v("Submit")]
-              ),
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-link",
-                  attrs: {
-                    type: "button",
-                    "data-toggle": "modal",
-                    "data-target": "#formregister",
-                    "aria-expanded": "false"
-                  }
-                },
-                [_vm._v("Or register here?")]
-              ),
-              _vm._v(" "),
-              _c("br")
-            ]
-          )
-        ]
-      )
+    return _c("h5", [
+      _c("strong", [_vm._v("FOX")]),
+      _c("i", [_vm._v("shared")])
     ])
   }
 ]
@@ -9267,11 +9326,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
+      isLogin: false,
       message: 'Hello world'
     };
+  },
+  methods: {
+    ubahtext: function ubahtext(payload) {
+      console.log(payload);
+      this.message = payload.username;
+    }
   },
   components: {
     navbar: _navbar.default,
@@ -9291,7 +9361,20 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("loginpage")
+  return _c(
+    "div",
+    [
+      _vm.isLogin ? _c("h1", [_vm._v("Setelah login")]) : _vm._e(),
+      _vm._v(" "),
+      !_vm.isLogin
+        ? _c("loginpage", {
+            attrs: { kelogin: _vm.message },
+            on: { darianak: _vm.ubahtext }
+          })
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -9364,7 +9447,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55787" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56760" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
