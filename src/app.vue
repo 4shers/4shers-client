@@ -2,6 +2,7 @@
     <div>
         <h1 v-if="isLogin">Setelah login</h1>
         <loginpage v-if="!isLogin"/>
+        <itemdetails v-if="isLogin"/>
     </div>
     
 </template>
@@ -9,7 +10,7 @@
 <script>
     import navbar from './components/navbar.vue'
     import loginpage from './components/loginpage.vue'
-    import register from './components/register.vue'
+    import item from './components/fileDetails.vue'
     export default {
         data() {
             return {
@@ -19,7 +20,8 @@
         },
         components: {
             navbar,
-            loginpage
+            loginpage,
+            item
         },
     }
 </script>
