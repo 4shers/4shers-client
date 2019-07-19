@@ -1,21 +1,24 @@
 <template>
     <div>
-        <h1 v-if="isLogin">Setelah login</h1>
-        <loginpage v-if="!isLogin"/>
-        <itemdetails v-if="isLogin"/>
+        <div v-if="isLogin">
+            <afterlogin :activeUser="activeUser" @logout="logout"/>
+        </div>
+        <div v-else>
+            <loginpage @loginSuccess="loginSuccess" />
+        </div>
     </div>
-    
 </template>
 
 <script>
-    import navbar from './components/navbar.vue'
+    import afterlogin from './components/afterlogin'
     import loginpage from './components/loginpage.vue'
     import item from './components/fileDetails.vue'
     export default {
         data() {
             return {
                 isLogin: false,
-                message: 'Hello world'
+                message: 'Hello world',
+                activeUser: ''
             }
         },
         components: {
@@ -23,6 +26,15 @@
             loginpage,
             item
         },
+        methods: {
+            loginSuccess(username) {
+                this.isLogin = true
+                this.activeUser = username
+            },
+            logout() {
+                this.isLogin = false
+            }
+        }
     }
 </script>
 
