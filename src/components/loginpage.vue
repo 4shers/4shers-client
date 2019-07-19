@@ -57,7 +57,6 @@
 import Swal from 'sweetalert2';
 export default {
 	name: 'loginpage',
-	// props: ['whichform'],
 	data() {
 		return {
 			whichForm : true,
@@ -91,6 +90,7 @@ export default {
 					customClass: 'fadeIn'
 				})
 				localStorage.setItem('token', data.token)
+				this.$emit('loginSuccess', data.username)
 			})
 			.catch((err) => {
 				Swal.fire({
