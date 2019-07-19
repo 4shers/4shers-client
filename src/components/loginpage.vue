@@ -89,7 +89,7 @@ export default {
 					customClass: 'fadeIn'
 				})
 				localStorage.setItem('token', data.token)
-				this.$emit('loginSuccess', data.username)
+				this.$emit('loginSuccess', data.fullname)
 			})
 			.catch((err) => {
 				Swal.fire({

@@ -10,9 +10,10 @@
 </template>
 
 <script>
-    import afterlogin from './components/afterlogin'
+    import afterlogin from './components/afterlogin.vue'
     import loginpage from './components/loginpage.vue'
     import item from './components/fileDetails.vue'
+    import navbar from './components/navbar.vue'
     export default {
         data() {
             return {
@@ -24,6 +25,7 @@
         components: {
             navbar,
             loginpage,
+            afterlogin,
             item
         },
         methods: {
