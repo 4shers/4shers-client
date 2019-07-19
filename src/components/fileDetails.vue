@@ -1,17 +1,13 @@
 <template>
   <div class="d-flex holder">
-    <div class="single-file d-flex">
+    <div class="single-file d-flex" style="flex-wrap: wrap">
       <div class="content-head">
         <h4>{{filename}}</h4>
       </div>
-      <div v-if="contentType === 'Code'" class="prism-code">
-        <prism language="javascript">{{ code }}</prism>
-        <small>Here's {{contentType}} by : {{author}}</small>
-      </div>
 
-      <div v-if="contentType === 'Pic'" class="img-user">
-        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="">
-        <small>Here's {{contentType}} by : {{author}}</small>
+      <div v-if="contentType.split('/')[0] == 'image'" class="img-user" style="display: block">
+        <img :src="itemdetails.filepath" alt="">
+        <small>Here's {{contentType}}</small>
       </div>
 
       <div class="buttons-share d-flex">
@@ -38,7 +34,13 @@
             </a>
         </div>
 
+
+      <div>
+        <button type="button" class="btn btn-primary" style="margin-left: 20px">Download</button> 
       </div>
+
+      </div>
+
     </div>
   </div>
 </template>
@@ -53,12 +55,13 @@ export default {
   props : ['itemdetails'],
   data : function () {
     return {
-      filename : 'Test.js',
-      author : 'Irshadi Bagasputro',
-      code : `console.log('Hello World')`,
-      urldata : `http://data.com`,
-      contentType : 'Pic'
+      filename : this.itemdetails.filename,
+      urldata : this.itemdetails.filepath,
+      contentType : this.itemdetails.filetype
     }
+  },
+  created() {
+    console.log(this.itemdetails)
   },
   components : {
     Prism
@@ -103,7 +106,7 @@ export default {
   }
 
   .img-user img {
-    width : 80vw;
+    width : 40vw;
     height: auto
   }
 </style>

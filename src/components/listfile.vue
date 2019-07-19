@@ -9,22 +9,24 @@
             <div class="row">
                 <div class="col-4" style="height: 300px">
                     <div class="list-group" id="list-tab" role="tablist" style="display: flex; flex: wrap; height: 250px; overflow-y: auto">
-                        <a v-for="file in fileList.files" :key="file" class="list-group-item list-group-item-action" data-toggle="list" :href="'#'+file" role="tab">{{file}}</a>
+                        <a v-for="(file, index) in fileList.files" :key="index" class="list-group-item list-group-item-action" data-toggle="list" :href="'#'+file.filename" role="tab">{{file.filename}}</a>
                     </div>
-                </div>
-                <div class="col-8">
-                    <div class="tab-content" id="nav-tabContent">
-                        <div v-for="file in fileList.files" :key="file" class="tab-pane fade" :id="file" role="tabpanel" aria-labelledby="list-home-list">
-                            {{file}} expanded
-                        </div>
-                    </div>
-                </div>
+                </div>                
             </div>
         </div>
+        <div class="container">
+        <div class="tab-content" id="nav-tabContent">
+            <div v-for="(file, index) in fileList.files" :key="index" class="tab-pane fade d-flex" :id="file.filename" role="tabpanel" aria-labelledby="list-home-list" style="flex-direction : column">
+                <item :itemdetails="file"/>
+            </div>
+        </div>
+        </div>
+    
     </div>  
 </template>
 
 <script>
+import item from './fileDetails'
 export default {
     name: 'listfile',
     data() {
@@ -33,6 +35,9 @@ export default {
         }
     },
     props: ['fileList'],
+    components: {
+        item
+    },
     created() {
         console.log('created')
         console.log(this.fileList)

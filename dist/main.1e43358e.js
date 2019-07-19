@@ -12822,18 +12822,13 @@ function patchScopedSlots (instance) {
   }
 }
 
-<<<<<<< HEAD
 },{}],"src/components/fileDetails.vue":[function(require,module,exports) {
-=======
-},{}],"src/components/listfile.vue":[function(require,module,exports) {
->>>>>>> tampilan
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-<<<<<<< HEAD
 
 require("prismjs");
 
@@ -12862,8 +12857,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-=======
->>>>>>> tampilan
+//
+//
 //
 //
 //
@@ -12891,17 +12886,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 var _default = {
-<<<<<<< HEAD
   name: 'item',
   props: ['itemdetails'],
   data: function data() {
     return {
-      filename: 'Test.js',
-      author: 'Irshadi Bagasputro',
-      code: "console.log('Hello World')",
-      urldata: "http://data.com",
-      contentType: 'Pic'
+      filename: this.itemdetails.filename,
+      urldata: this.itemdetails.filepath,
+      contentType: this.itemdetails.filetype
     };
+  },
+  created: function created() {
+    console.log(this.itemdetails);
   },
   components: {
     Prism: _vuePrismComponent.default
@@ -12916,12 +12911,186 @@ exports.default = _default;
     
         /* template */
         Object.assign($ae9abc, (function () {
-=======
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "d-flex holder" }, [
+    _c(
+      "div",
+      {
+        staticClass: "single-file d-flex",
+        staticStyle: { "flex-wrap": "wrap" }
+      },
+      [
+        _c("div", { staticClass: "content-head" }, [
+          _c("h4", [_vm._v(_vm._s(_vm.filename))])
+        ]),
+        _vm._v(" "),
+        _vm.contentType.split("/")[0] == "image"
+          ? _c(
+              "div",
+              { staticClass: "img-user", staticStyle: { display: "block" } },
+              [
+                _c("img", {
+                  attrs: { src: _vm.itemdetails.filepath, alt: "" }
+                }),
+                _vm._v(" "),
+                _c("small", [_vm._v("Here's " + _vm._s(_vm.contentType))])
+              ]
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _c("div", { staticClass: "buttons-share d-flex" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn",
+              staticStyle: { "background-color": "#1c94e0", color: "#fff" },
+              attrs: {
+                href: "https://twitter.com/intent/tweet?text=" + _vm.urldata,
+                "data-size": "large",
+                "data-text": "custom share text",
+                "data-url": "https://dev.twitter.com/web/tweet-button",
+                "data-hashtags": "hacktiv8,demo",
+                "data-via": "twitterdev",
+                "data-related": "twitterapi,twitter"
+              }
+            },
+            [_vm._v("\n      Tweet\n      ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "fb-share-button",
+              attrs: {
+                "data-href": "https://developers.facebook.com/docs/plugins/",
+                "data-layout": "button",
+                "data-size": "small"
+              }
+            },
+            [
+              _c(
+                "a",
+                {
+                  staticClass: "fb-xfbml-parse-ignore btn",
+                  staticStyle: { "background-color": "#4267b2", color: "#fff" },
+                  attrs: {
+                    href:
+                      "https://www.facebook.com/sharer/sharer.php?u=" +
+                      _vm.urldata
+                  }
+                },
+                [_vm._v("Bagikan\n          ")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary",
+          staticStyle: { "margin-left": "20px" },
+          attrs: { type: "button" }
+        },
+        [_vm._v("Download")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$ae9abc', $ae9abc);
+          } else {
+            api.reload('$ae9abc', $ae9abc);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"prismjs":"node_modules/prismjs/prism.js","prismjs/themes/prism.css":"node_modules/prismjs/themes/prism.css","vue-prism-component":"node_modules/vue-prism-component/dist/vue-prism-component.common.js","_css_loader":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/listfile.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _fileDetails = _interopRequireDefault(require("./fileDetails"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
   name: 'listfile',
   data: function data() {
     return {};
   },
   props: ['fileList'],
+  components: {
+    item: _fileDetails.default
+  },
   created: function created() {
     console.log('created');
     console.log(this.fileList);
@@ -12932,115 +13101,18 @@ exports.default = _default;
   }
 };
 exports.default = _default;
-        var $11b6d3 = exports.default || module.exports;
+        var $bb1792 = exports.default || module.exports;
       
-      if (typeof $11b6d3 === 'function') {
-        $11b6d3 = $11b6d3.options;
+      if (typeof $bb1792 === 'function') {
+        $bb1792 = $bb1792.options;
       }
     
         /* template */
-        Object.assign($11b6d3, (function () {
->>>>>>> tampilan
+        Object.assign($bb1792, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-<<<<<<< HEAD
-  return _c("div", { staticClass: "d-flex holder" }, [
-    _c("div", { staticClass: "single-file d-flex" }, [
-      _c("div", { staticClass: "content-head" }, [
-        _c("h4", [_vm._v(_vm._s(_vm.filename))])
-      ]),
-      _vm._v(" "),
-      _vm.contentType === "Code"
-        ? _c(
-            "div",
-            { staticClass: "prism-code" },
-            [
-              _c("prism", { attrs: { language: "javascript" } }, [
-                _vm._v(_vm._s(_vm.code))
-              ]),
-              _vm._v(" "),
-              _c("small", [
-                _vm._v(
-                  "Here's " +
-                    _vm._s(_vm.contentType) +
-                    " by : " +
-                    _vm._s(_vm.author)
-                )
-              ])
-            ],
-            1
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.contentType === "Pic"
-        ? _c("div", { staticClass: "img-user" }, [
-            _c("img", {
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-                alt: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("small", [
-              _vm._v(
-                "Here's " +
-                  _vm._s(_vm.contentType) +
-                  " by : " +
-                  _vm._s(_vm.author)
-              )
-            ])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("div", { staticClass: "buttons-share d-flex" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn",
-            staticStyle: { "background-color": "#1c94e0", color: "#fff" },
-            attrs: {
-              href: "https://twitter.com/intent/tweet?text=" + _vm.urldata,
-              "data-size": "large",
-              "data-text": "custom share text",
-              "data-url": "https://dev.twitter.com/web/tweet-button",
-              "data-hashtags": "hacktiv8,demo",
-              "data-via": "twitterdev",
-              "data-related": "twitterapi,twitter"
-            }
-          },
-          [_vm._v("\n      Tweet\n      ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "fb-share-button",
-            attrs: {
-              "data-href": "https://developers.facebook.com/docs/plugins/",
-              "data-layout": "button",
-              "data-size": "small"
-            }
-          },
-          [
-            _c(
-              "a",
-              {
-                staticClass: "fb-xfbml-parse-ignore btn",
-                staticStyle: { "background-color": "#4267b2", color: "#fff" },
-                attrs: {
-                  href:
-                    "https://www.facebook.com/sharer/sharer.php?u=" +
-                    _vm.urldata
-                }
-              },
-              [_vm._v("Bagikan\n          ")]
-            )
-          ]
-        )
-=======
   return _c("div", [
     _c(
       "div",
@@ -13074,55 +13146,50 @@ exports.default = _default;
               },
               attrs: { id: "list-tab", role: "tablist" }
             },
-            _vm._l(_vm.fileList.files, function(file) {
+            _vm._l(_vm.fileList.files, function(file, index) {
               return _c(
                 "a",
                 {
-                  key: file,
+                  key: index,
                   staticClass: "list-group-item list-group-item-action",
                   attrs: {
                     "data-toggle": "list",
-                    href: "#" + file,
+                    href: "#" + file.filename,
                     role: "tab"
                   }
                 },
-                [_vm._v(_vm._s(file))]
-              )
-            }),
-            0
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-8" }, [
-          _c(
-            "div",
-            { staticClass: "tab-content", attrs: { id: "nav-tabContent" } },
-            _vm._l(_vm.fileList.files, function(file) {
-              return _c(
-                "div",
-                {
-                  key: file,
-                  staticClass: "tab-pane fade",
-                  attrs: {
-                    id: file,
-                    role: "tabpanel",
-                    "aria-labelledby": "list-home-list"
-                  }
-                },
-                [
-                  _vm._v(
-                    "\n                        " +
-                      _vm._s(file) +
-                      " expanded\n                    "
-                  )
-                ]
+                [_vm._v(_vm._s(file.filename))]
               )
             }),
             0
           )
         ])
->>>>>>> tampilan
       ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "tab-content", attrs: { id: "nav-tabContent" } },
+        _vm._l(_vm.fileList.files, function(file, index) {
+          return _c(
+            "div",
+            {
+              key: index,
+              staticClass: "tab-pane fade d-flex",
+              staticStyle: { "flex-direction": "column" },
+              attrs: {
+                id: file.filename,
+                role: "tabpanel",
+                "aria-labelledby": "list-home-list"
+              }
+            },
+            [_c("item", { attrs: { itemdetails: file } })],
+            1
+          )
+        }),
+        0
+      )
     ])
   ])
 }
@@ -13146,15 +13213,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-<<<<<<< HEAD
-            api.createRecord('$ae9abc', $ae9abc);
+            api.createRecord('$bb1792', $bb1792);
           } else {
-            api.reload('$ae9abc', $ae9abc);
-=======
-            api.createRecord('$11b6d3', $11b6d3);
-          } else {
-            api.reload('$11b6d3', $11b6d3);
->>>>>>> tampilan
+            api.reload('$bb1792', $bb1792);
           }
         }
 
@@ -13165,11 +13226,7 @@ render._withStripped = true
       
       }
     })();
-<<<<<<< HEAD
-},{"prismjs":"node_modules/prismjs/prism.js","prismjs/themes/prism.css":"node_modules/prismjs/themes/prism.css","vue-prism-component":"node_modules/vue-prism-component/dist/vue-prism-component.common.js","_css_loader":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/afterlogin.vue":[function(require,module,exports) {
-=======
-},{"_css_loader":"C:/Users/Kuma/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/afterlogin.vue":[function(require,module,exports) {
->>>>>>> tampilan
+},{"./fileDetails":"src/components/fileDetails.vue","_css_loader":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/afterlogin.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13179,11 +13236,7 @@ exports.default = void 0;
 
 var _sweetalert = _interopRequireDefault(require("sweetalert2"));
 
-<<<<<<< HEAD
-var _fileDetails = _interopRequireDefault(require("./fileDetails"));
-=======
 var _listfile = _interopRequireDefault(require("./listfile.vue"));
->>>>>>> tampilan
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13270,8 +13323,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-<<<<<<< HEAD
-=======
 //
 //
 //
@@ -13314,7 +13365,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
->>>>>>> tampilan
 var _default = {
   name: 'afterlogin',
   data: function data() {
@@ -13331,9 +13381,6 @@ var _default = {
       bucketinfo: {},
       bucketname: ''
     };
-  },
-  components: {
-    itemdetails: _fileDetails.default
   },
   props: ['activeUser'],
   components: {
@@ -13528,11 +13575,8 @@ exports.default = _default;
           },
           [
             _c("ul", { staticClass: "navbar-nav" }, [
-<<<<<<< HEAD
-=======
               _vm._m(2),
               _vm._v(" "),
->>>>>>> tampilan
               _c("li", { staticClass: "nav-item dropdown" }, [
                 _c(
                   "a",
@@ -13546,25 +13590,17 @@ exports.default = _default;
                       "aria-expanded": "false"
                     }
                   },
-<<<<<<< HEAD
-                  [_vm._v("\n\t\t\t\t\t\t\t\t\t\tProfile\n\t\t\t\t\t\t\t\t")]
-=======
                   [
                     _vm._v(
-                      "\n                        Profile\n                    "
+                      "\n                            Profile\n                        "
                     )
                   ]
->>>>>>> tampilan
                 ),
                 _vm._v(" "),
                 _c(
                   "div",
                   {
-<<<<<<< HEAD
-                    staticClass: "dropdown-menu right",
-=======
                     staticClass: "dropdown-menu dropdown-menu-right",
->>>>>>> tampilan
                     attrs: { "aria-labelledby": "navbarDropdownMenuLink" }
                   },
                   [
@@ -13601,13 +13637,7 @@ exports.default = _default;
                     )
                   ]
                 )
-<<<<<<< HEAD
-              ]),
-              _vm._v(" "),
-              _vm._m(2)
-=======
               ])
->>>>>>> tampilan
             ])
           ]
         ),
@@ -13643,8 +13673,6 @@ exports.default = _default;
                         ]),
                         _vm._v(" "),
                         _c("input", {
-<<<<<<< HEAD
-=======
                           directives: [
                             {
                               name: "model",
@@ -13673,44 +13701,27 @@ exports.default = _default;
                       _vm._v(" "),
                       _c("div", { staticClass: "form-group" }, [
                         _c("input", {
->>>>>>> tampilan
                           directives: [
                             {
                               name: "model",
                               rawName: "v-model",
-<<<<<<< HEAD
-                              value: _vm.filename,
-                              expression: "filename"
-=======
                               value: _vm.bucketname,
                               expression: "bucketname"
->>>>>>> tampilan
                             }
                           ],
                           staticClass: "form-control",
                           attrs: {
                             type: "text",
-<<<<<<< HEAD
-                            id: "filename",
-                            placeholder: "File name to upload"
-                          },
-                          domProps: { value: _vm.filename },
-=======
                             id: "bucketname",
                             placeholder: "Bucket name to create"
                           },
                           domProps: { value: _vm.bucketname },
->>>>>>> tampilan
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
-<<<<<<< HEAD
-                              _vm.filename = $event.target.value
-=======
                               _vm.bucketname = $event.target.value
->>>>>>> tampilan
                             }
                           }
                         })
@@ -13733,10 +13744,7 @@ exports.default = _default;
                               }
                             ],
                             staticClass: "form-control",
-<<<<<<< HEAD
-=======
                             attrs: { required: "" },
->>>>>>> tampilan
                             on: {
                               change: function($event) {
                                 var $$selectedVal = Array.prototype.filter
@@ -13754,18 +13762,6 @@ exports.default = _default;
                             }
                           },
                           _vm._l(_vm.buckets, function(bucket, index) {
-<<<<<<< HEAD
-                            return _c("option", { key: index }, [
-                              _vm._v(_vm._s(bucket.name))
-                            ])
-                          }),
-                          0
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _vm._m(4)
-=======
                             return _c(
                               "option",
                               { key: index, domProps: { value: bucket._id } },
@@ -13776,7 +13772,9 @@ exports.default = _default;
                         ),
                         _vm._v(" "),
                         _c("label", { staticStyle: { "margin-top": "10px" } }, [
-                          _vm._v("File\n                                    "),
+                          _vm._v(
+                            "File\n                                        "
+                          ),
                           _c("input", {
                             ref: "file",
                             attrs: { type: "file", id: "file" },
@@ -13819,7 +13817,6 @@ exports.default = _default;
                         )
                       ]
                     )
->>>>>>> tampilan
                   ])
                 ])
               ]
@@ -13829,9 +13826,6 @@ exports.default = _default;
       ]
     ),
     _vm._v(" "),
-<<<<<<< HEAD
-    _c("div", [_c("itemdetails")], 1)
-=======
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row" }, [
         _c(
@@ -13983,7 +13977,6 @@ exports.default = _default;
           ],
           1
         )
->>>>>>> tampilan
   ])
 }
 var staticRenderFns = [
@@ -14037,11 +14030,11 @@ var staticRenderFns = [
             "aria-controls": "collapseExample"
           }
         },
-<<<<<<< HEAD
-        [_vm._v("\n\t\t\t\t\t\t\t\tCreate project\n\t\t\t\t\t\t\t")]
-=======
-        [_vm._v("\n                        Upload file\n                    ")]
->>>>>>> tampilan
+        [
+          _vm._v(
+            "\n                            Upload file\n                        "
+          )
+        ]
       )
     ])
   },
@@ -14175,11 +14168,7 @@ render._withStripped = true
       
       }
     })();
-<<<<<<< HEAD
-},{"sweetalert2":"node_modules/sweetalert2/dist/sweetalert2.all.js","./fileDetails":"src/components/fileDetails.vue","_css_loader":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/loginpage.vue":[function(require,module,exports) {
-=======
-},{"sweetalert2":"node_modules/sweetalert2/dist/sweetalert2.all.js","./listfile.vue":"src/components/listfile.vue","_css_loader":"C:/Users/Kuma/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/loginpage.vue":[function(require,module,exports) {
->>>>>>> tampilan
+},{"sweetalert2":"node_modules/sweetalert2/dist/sweetalert2.all.js","./listfile.vue":"src/components/listfile.vue","_css_loader":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/loginpage.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15149,11 +15138,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55874" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61125" + '/');
->>>>>>> tampilan
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58775" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
