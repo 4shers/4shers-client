@@ -12822,13 +12822,18 @@ function patchScopedSlots (instance) {
   }
 }
 
+<<<<<<< HEAD
 },{}],"src/components/fileDetails.vue":[function(require,module,exports) {
+=======
+},{}],"src/components/listfile.vue":[function(require,module,exports) {
+>>>>>>> tampilan
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+<<<<<<< HEAD
 
 require("prismjs");
 
@@ -12857,6 +12862,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+=======
+>>>>>>> tampilan
 //
 //
 //
@@ -12884,6 +12891,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 var _default = {
+<<<<<<< HEAD
   name: 'item',
   props: ['itemdetails'],
   data: function data() {
@@ -12908,10 +12916,36 @@ exports.default = _default;
     
         /* template */
         Object.assign($ae9abc, (function () {
+=======
+  name: 'listfile',
+  data: function data() {
+    return {};
+  },
+  props: ['fileList'],
+  created: function created() {
+    console.log('created');
+    console.log(this.fileList);
+  },
+  mounted: function mounted() {
+    console.log('mounted');
+    console.log(this.fileList);
+  }
+};
+exports.default = _default;
+        var $11b6d3 = exports.default || module.exports;
+      
+      if (typeof $11b6d3 === 'function') {
+        $11b6d3 = $11b6d3.options;
+      }
+    
+        /* template */
+        Object.assign($11b6d3, (function () {
+>>>>>>> tampilan
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c("div", { staticClass: "d-flex holder" }, [
     _c("div", { staticClass: "single-file d-flex" }, [
       _c("div", { staticClass: "content-head" }, [
@@ -13006,6 +13040,88 @@ exports.default = _default;
             )
           ]
         )
+=======
+  return _c("div", [
+    _c(
+      "div",
+      {
+        staticClass: "container",
+        staticStyle: {
+          display: "flex",
+          "justify-content": "center",
+          "margin-top": "50px"
+        }
+      },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("h3", [_vm._v(_vm._s(_vm.fileList.bucketname))])
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-4", staticStyle: { height: "300px" } }, [
+          _c(
+            "div",
+            {
+              staticClass: "list-group",
+              staticStyle: {
+                display: "flex",
+                flex: "wrap",
+                height: "250px",
+                "overflow-y": "auto"
+              },
+              attrs: { id: "list-tab", role: "tablist" }
+            },
+            _vm._l(_vm.fileList.files, function(file) {
+              return _c(
+                "a",
+                {
+                  key: file,
+                  staticClass: "list-group-item list-group-item-action",
+                  attrs: {
+                    "data-toggle": "list",
+                    href: "#" + file,
+                    role: "tab"
+                  }
+                },
+                [_vm._v(_vm._s(file))]
+              )
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-8" }, [
+          _c(
+            "div",
+            { staticClass: "tab-content", attrs: { id: "nav-tabContent" } },
+            _vm._l(_vm.fileList.files, function(file) {
+              return _c(
+                "div",
+                {
+                  key: file,
+                  staticClass: "tab-pane fade",
+                  attrs: {
+                    id: file,
+                    role: "tabpanel",
+                    "aria-labelledby": "list-home-list"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(file) +
+                      " expanded\n                    "
+                  )
+                ]
+              )
+            }),
+            0
+          )
+        ])
+>>>>>>> tampilan
       ])
     ])
   ])
@@ -13030,9 +13146,15 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
+<<<<<<< HEAD
             api.createRecord('$ae9abc', $ae9abc);
           } else {
             api.reload('$ae9abc', $ae9abc);
+=======
+            api.createRecord('$11b6d3', $11b6d3);
+          } else {
+            api.reload('$11b6d3', $11b6d3);
+>>>>>>> tampilan
           }
         }
 
@@ -13043,7 +13165,11 @@ render._withStripped = true
       
       }
     })();
+<<<<<<< HEAD
 },{"prismjs":"node_modules/prismjs/prism.js","prismjs/themes/prism.css":"node_modules/prismjs/themes/prism.css","vue-prism-component":"node_modules/vue-prism-component/dist/vue-prism-component.common.js","_css_loader":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/afterlogin.vue":[function(require,module,exports) {
+=======
+},{"_css_loader":"C:/Users/Kuma/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/afterlogin.vue":[function(require,module,exports) {
+>>>>>>> tampilan
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13053,7 +13179,11 @@ exports.default = void 0;
 
 var _sweetalert = _interopRequireDefault(require("sweetalert2"));
 
+<<<<<<< HEAD
 var _fileDetails = _interopRequireDefault(require("./fileDetails"));
+=======
+var _listfile = _interopRequireDefault(require("./listfile.vue"));
+>>>>>>> tampilan
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13140,20 +13270,97 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> tampilan
 var _default = {
   name: 'afterlogin',
   data: function data() {
     return {
+      bucketDetailClicked: false,
+      searched: false,
+      fileList: ['file1', 'file2', 'file3', 'file4', 'file5', 'file6', 'file7', 'file8', 'file9', 'file10'],
+      fileUpload: '',
+      searchType: '',
+      searchedFile: [],
       filename: '',
       buckets: [],
-      choosenbucket: ''
+      chosenbucket: '',
+      bucketinfo: {},
+      bucketname: ''
     };
   },
   components: {
     itemdetails: _fileDetails.default
   },
   props: ['activeUser'],
+  components: {
+    listfile: _listfile.default
+  },
   methods: {
+    bucketDetail: function bucketDetail(bucket) {
+      this.bucketinfo = bucket, this.bucketDetailClicked = true;
+    },
+    searchinfo: function searchinfo() {
+      if (this.searchType == '') {
+        _sweetalert.default.fire({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          type: 'error',
+          title: 'Choose search type!',
+          customClass: 'fadeIn'
+        });
+      } else {
+        this.searched = true;
+      }
+    },
+    handleFileUpload: function handleFileUpload() {
+      this.fileUpload = this.$refs.file.files[0];
+    },
     logout: function logout() {
       localStorage.removeItem('token'), localStorage.removeItem('username'), this.$emit('logout');
 
@@ -13166,10 +13373,128 @@ var _default = {
         title: 'Logged out',
         customClass: 'fadeIn'
       });
+    },
+    upload: function upload() {
+      var _this = this;
+
+      var formData = new FormData();
+      formData.append('filepath', this.fileUpload);
+      formData.append('filename', this.filename);
+      formData.append('status', '');
+      formData.append('bucketId', this.chosenbucket);
+      console.log(formData);
+
+      if (this.chosenbucket) {
+        axios({
+          method: 'post',
+          url: 'http://localhost:3000/items',
+          data: formData,
+          config: {
+            headers: {
+              token: localStorage.getItem('token'),
+              'Content-Type': 'multipart/form-data'
+            }
+          },
+          headers: {
+            token: localStorage.getItem('token')
+          }
+        }).then(function (_ref) {
+          var data = _ref.data;
+          console.log(data);
+
+          _this.fetchBucket();
+
+          _sweetalert.default.fire({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            type: 'success',
+            title: 'File uploaded',
+            customClass: 'fadeIn'
+          });
+        }).catch(function (err) {
+          _sweetalert.default.fire({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            type: 'error',
+            title: 'Upload failed',
+            customClass: 'fadeIn'
+          });
+        });
+      } else {
+        axios({
+          url: 'http://localhost:3000/buckets',
+          method: 'post',
+          headers: {
+            token: localStorage.getItem('token')
+          },
+          data: {
+            bucketname: this.bucketname
+          }
+        }).then(function (_ref2) {
+          var data = _ref2.data;
+          axios.post('http://localhost:3000/items', formData, {
+            headers: {
+              token: localStorage.getItem('token'),
+              'Content-Type': 'multipart/form-data',
+              data: {
+                filename: _this.filename,
+                status: '',
+                bucketId: data._id
+              }
+            }
+          }).then(function (_ref3) {
+            var data = _ref3.data;
+            console.log(data);
+
+            _this.fetchBucket();
+
+            _sweetalert.default.fire({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              type: 'success',
+              title: 'File uploaded',
+              customClass: 'fadeIn'
+            });
+          }).catch(function (err) {
+            _sweetalert.default.fire({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              type: 'error',
+              title: 'Upload failed',
+              customClass: 'fadeIn'
+            });
+          });
+        });
+      }
+    },
+    fetchBucket: function fetchBucket() {
+      var _this2 = this;
+
+      axios({
+        method: 'get',
+        url: 'http://localhost:3000/buckets/userBucket',
+        headers: {
+          token: localStorage.getItem('token')
+        }
+      }).then(function (_ref4) {
+        var data = _ref4.data;
+        _this2.buckets = data;
+        console.log(data);
+      }).catch(function (err) {
+        console.log(err);
+      });
     }
   },
-  mounted: {
-    fetchbucket: function fetchbucket() {}
+  created: function created() {
+    this.fetchBucket();
   }
 };
 exports.default = _default;
@@ -13203,6 +13528,11 @@ exports.default = _default;
           },
           [
             _c("ul", { staticClass: "navbar-nav" }, [
+<<<<<<< HEAD
+=======
+              _vm._m(2),
+              _vm._v(" "),
+>>>>>>> tampilan
               _c("li", { staticClass: "nav-item dropdown" }, [
                 _c(
                   "a",
@@ -13216,13 +13546,25 @@ exports.default = _default;
                       "aria-expanded": "false"
                     }
                   },
+<<<<<<< HEAD
                   [_vm._v("\n\t\t\t\t\t\t\t\t\t\tProfile\n\t\t\t\t\t\t\t\t")]
+=======
+                  [
+                    _vm._v(
+                      "\n                        Profile\n                    "
+                    )
+                  ]
+>>>>>>> tampilan
                 ),
                 _vm._v(" "),
                 _c(
                   "div",
                   {
+<<<<<<< HEAD
                     staticClass: "dropdown-menu right",
+=======
+                    staticClass: "dropdown-menu dropdown-menu-right",
+>>>>>>> tampilan
                     attrs: { "aria-labelledby": "navbarDropdownMenuLink" }
                   },
                   [
@@ -13259,9 +13601,13 @@ exports.default = _default;
                     )
                   ]
                 )
+<<<<<<< HEAD
               ]),
               _vm._v(" "),
               _vm._m(2)
+=======
+              ])
+>>>>>>> tampilan
             ])
           ]
         ),
@@ -13297,6 +13643,8 @@ exports.default = _default;
                         ]),
                         _vm._v(" "),
                         _c("input", {
+<<<<<<< HEAD
+=======
                           directives: [
                             {
                               name: "model",
@@ -13324,6 +13672,51 @@ exports.default = _default;
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "form-group" }, [
+                        _c("input", {
+>>>>>>> tampilan
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+<<<<<<< HEAD
+                              value: _vm.filename,
+                              expression: "filename"
+=======
+                              value: _vm.bucketname,
+                              expression: "bucketname"
+>>>>>>> tampilan
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "text",
+<<<<<<< HEAD
+                            id: "filename",
+                            placeholder: "File name to upload"
+                          },
+                          domProps: { value: _vm.filename },
+=======
+                            id: "bucketname",
+                            placeholder: "Bucket name to create"
+                          },
+                          domProps: { value: _vm.bucketname },
+>>>>>>> tampilan
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+<<<<<<< HEAD
+                              _vm.filename = $event.target.value
+=======
+                              _vm.bucketname = $event.target.value
+>>>>>>> tampilan
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
                         _c("label", { attrs: { for: "bucket" } }, [
                           _vm._v("Choose your bucket:")
                         ]),
@@ -13340,6 +13733,10 @@ exports.default = _default;
                               }
                             ],
                             staticClass: "form-control",
+<<<<<<< HEAD
+=======
+                            attrs: { required: "" },
+>>>>>>> tampilan
                             on: {
                               change: function($event) {
                                 var $$selectedVal = Array.prototype.filter
@@ -13357,6 +13754,7 @@ exports.default = _default;
                             }
                           },
                           _vm._l(_vm.buckets, function(bucket, index) {
+<<<<<<< HEAD
                             return _c("option", { key: index }, [
                               _vm._v(_vm._s(bucket.name))
                             ])
@@ -13367,6 +13765,61 @@ exports.default = _default;
                     ]),
                     _vm._v(" "),
                     _vm._m(4)
+=======
+                            return _c(
+                              "option",
+                              { key: index, domProps: { value: bucket._id } },
+                              [_vm._v(_vm._s(bucket.bucketname))]
+                            )
+                          }),
+                          0
+                        ),
+                        _vm._v(" "),
+                        _c("label", { staticStyle: { "margin-top": "10px" } }, [
+                          _vm._v("File\n                                    "),
+                          _c("input", {
+                            ref: "file",
+                            attrs: { type: "file", id: "file" },
+                            on: {
+                              change: function($event) {
+                                return _vm.handleFileUpload()
+                              }
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "modal-footer border-top-0 d-flex justify-content-center"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-light",
+                            staticStyle: {
+                              "border-color": "#E9ECEF",
+                              position: "absolute",
+                              right: "15px",
+                              bottom: "15px"
+                            },
+                            attrs: { type: "submit", "data-dismiss": "modal" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.upload($event)
+                              }
+                            }
+                          },
+                          [_vm._v("Submit")]
+                        )
+                      ]
+                    )
+>>>>>>> tampilan
                   ])
                 ])
               ]
@@ -13376,7 +13829,161 @@ exports.default = _default;
       ]
     ),
     _vm._v(" "),
+<<<<<<< HEAD
     _c("div", [_c("itemdetails")], 1)
+=======
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "form",
+          {
+            staticClass: "form-inline",
+            staticStyle: {
+              "margin-top": "25px",
+              "margin-right": "auto",
+              "margin-left": "auto"
+            },
+            attrs: { id: "formSearch" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.searchinfo($event)
+              }
+            }
+          },
+          [
+            _vm._m(4),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.searchType,
+                      expression: "searchType"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.searchType = $event.target.multiple
+                        ? $$selectedVal
+                        : $$selectedVal[0]
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "Bucket", selected: "" } }, [
+                    _vm._v("Bucket")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "File" } }, [_vm._v("File")])
+                ]
+              )
+            ])
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _vm.searched
+      ? _c(
+          "div",
+          [
+            _vm._m(5),
+            _vm._v(" "),
+            _c("listfile", { attrs: { fileList: _vm.searchedFile } })
+          ],
+          1
+        )
+      : _c(
+          "div",
+          [
+            _vm._m(6),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "container",
+                staticStyle: {
+                  display: "flex",
+                  "flex-wrap": "nowrap",
+                  "overflow-x": "auto"
+                }
+              },
+              _vm._l(_vm.buckets, function(bucket, index) {
+                return _c(
+                  "div",
+                  {
+                    key: index,
+                    staticClass: "card",
+                    staticStyle: {
+                      cursor: "pointer",
+                      width: "13rem",
+                      height: "auto",
+                      "margin-bottom": "25px",
+                      "margin-right": "5px",
+                      "margin-left": "5px",
+                      flex: "0 0 auto"
+                    },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.bucketDetail(bucket)
+                      }
+                    }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      staticStyle: {
+                        height: "50%",
+                        width: "50%",
+                        margin: "10px auto auto auto"
+                      },
+                      attrs: {
+                        src:
+                          "https://static.thenounproject.com/png/29962-200.png",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "card-body",
+                        staticStyle: { margin: "auto" }
+                      },
+                      [
+                        _c("h5", { staticClass: "card-title" }, [
+                          _vm._v(_vm._s(bucket.bucketname))
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              }),
+              0
+            ),
+            _vm._v(" "),
+            _vm.bucketDetailClicked
+              ? _c("listfile", { attrs: { fileList: _vm.bucketinfo } })
+              : _vm._e()
+          ],
+          1
+        )
+>>>>>>> tampilan
   ])
 }
 var staticRenderFns = [
@@ -13430,7 +14037,11 @@ var staticRenderFns = [
             "aria-controls": "collapseExample"
           }
         },
+<<<<<<< HEAD
         [_vm._v("\n\t\t\t\t\t\t\t\tCreate project\n\t\t\t\t\t\t\t")]
+=======
+        [_vm._v("\n                        Upload file\n                    ")]
+>>>>>>> tampilan
       )
     ])
   },
@@ -13465,25 +14076,70 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
+      { staticClass: "input-group", staticStyle: { width: "400px" } },
+      [
+        _c("div", { staticClass: "input-group-prepend" }, [
+          _c("a", { attrs: { type: "submit" } }, [
+            _c(
+              "span",
+              {
+                staticClass: "input-group-text",
+                attrs: { id: "basic-addon1" }
+              },
+              [_vm._v("@")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control",
+          attrs: {
+            type: "text",
+            placeholder: "Search",
+            "aria-label": "Search",
+            id: "contentSearch",
+            "aria-describedby": "basic-addon1"
+          }
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
       {
-        staticClass: "modal-footer border-top-0 d-flex justify-content-center"
+        staticClass: "container",
+        staticStyle: {
+          display: "flex",
+          "justify-content": "center",
+          "margin-top": "50px"
+        }
       },
       [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-light",
-            staticStyle: {
-              "border-color": "#E9ECEF",
-              position: "absolute",
-              right: "15px",
-              bottom: "15px"
-            },
-            attrs: { type: "submit", "data-dismiss": "modal" }
-          },
-          [_vm._v("Submit")]
-        )
+        _c("div", { staticClass: "row" }, [
+          _c("h3", [_vm._v("Searched items")])
+        ])
       ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "container",
+        staticStyle: {
+          display: "flex",
+          "justify-content": "center",
+          "margin-top": "50px"
+        }
+      },
+      [_c("div", { staticClass: "row" }, [_c("h3", [_vm._v("My buckets")])])]
     )
   }
 ]
@@ -13519,7 +14175,11 @@ render._withStripped = true
       
       }
     })();
+<<<<<<< HEAD
 },{"sweetalert2":"node_modules/sweetalert2/dist/sweetalert2.all.js","./fileDetails":"src/components/fileDetails.vue","_css_loader":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/loginpage.vue":[function(require,module,exports) {
+=======
+},{"sweetalert2":"node_modules/sweetalert2/dist/sweetalert2.all.js","./listfile.vue":"src/components/listfile.vue","_css_loader":"C:/Users/Kuma/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/loginpage.vue":[function(require,module,exports) {
+>>>>>>> tampilan
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14362,6 +15022,28 @@ var _default = {
     logout: function logout() {
       this.isLogin = false;
     }
+  },
+  created: function created() {
+    var _this = this;
+
+    console.log('here');
+
+    if (localStorage.getItem('token')) {
+      axios({
+        url: 'http://localhost:3000/buckets/userBucket',
+        method: 'get',
+        headers: {
+          token: localStorage.getItem('token')
+        }
+      }).then(function (_ref) {
+        var data = _ref.data;
+        _this.isLogin = true;
+      }).catch(function (err) {
+        console.log(err);
+      });
+    } else {
+      console.log('gaada token');
+    }
   }
 };
 exports.default = _default;
@@ -14467,7 +15149,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "55874" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61125" + '/');
+>>>>>>> tampilan
 
   ws.onmessage = function (event) {
     checkedAssets = {};
