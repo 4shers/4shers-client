@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/4shers/4shers-client#readme",
   "dependencies": {
+    "sweetalert2": "^8.14.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   },
