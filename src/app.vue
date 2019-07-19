@@ -32,6 +32,26 @@
             logout() {
                 this.isLogin = false
             }
+        },
+        created: function() {
+            console.log('here')
+            if (localStorage.getItem('token')) {
+                axios({
+                    url: 'http://localhost:3000/buckets/userBucket',
+                    method: 'get',
+                    headers: {
+                        token: localStorage.getItem('token')
+                    }
+                })
+                .then( ({data}) => {
+                    this.isLogin = true
+                })
+                .catch( (err) => {
+                    console.log(err)
+                })
+            } else {
+                console.log('gaada token')
+            }
         }
     }
 </script>

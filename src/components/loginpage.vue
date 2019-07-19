@@ -4,7 +4,6 @@
 		<div v-if="whichForm" class="row" style="text-align: center; padding: 150px">
 			<form id="formLogin" style="margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto;">
 				<h5><strong>FOX</strong><i>shared</i></h5>
-				<p>{{kelogin}}</p>
 				<br>
 				<div class="form-group" style="width: 650px;">
 						<label for="username">Username</label>
